@@ -1,0 +1,21 @@
+C:\Users\Petr Kubíček\code\Test rozhodčího\Test rozhodčího\bin\Release\Test rozhodčího.exe.config
+C:\Users\Petr Kubíček\code\Test rozhodčího\Test rozhodčího\bin\Release\Test rozhodčího.exe
+C:\Users\Petr Kubíček\code\Test rozhodčího\Test rozhodčího\bin\Release\Test rozhodčího.pdb
+C:\Users\Petr Kubíček\code\Test rozhodčího\Test rozhodčího\bin\Release\MaterialDesignColors.dll
+C:\Users\Petr Kubíček\code\Test rozhodčího\Test rozhodčího\bin\Release\MaterialDesignThemes.Wpf.dll
+C:\Users\Petr Kubíček\code\Test rozhodčího\Test rozhodčího\bin\Release\MaterialDesignThemes.Wpf.pdb
+C:\Users\Petr Kubíček\code\Test rozhodčího\Test rozhodčího\bin\Release\MaterialDesignThemes.Wpf.xml
+C:\Users\Petr Kubíček\code\Test rozhodčího\Test rozhodčího\obj\Release\MainWindow.g.cs
+C:\Users\Petr Kubíček\code\Test rozhodčího\Test rozhodčího\obj\Release\App.g.cs
+C:\Users\Petr Kubíček\code\Test rozhodčího\Test rozhodčího\obj\Release\Test rozhodčího_MarkupCompile.cache
+C:\Users\Petr Kubíček\code\Test rozhodčího\Test rozhodčího\obj\Release\Test rozhodčího_MarkupCompile.lref
+C:\Users\Petr Kubíček\code\Test rozhodčího\Test rozhodčího\obj\Release\App.baml
+C:\Users\Petr Kubíček\code\Test rozhodčího\Test rozhodčího\obj\Release\MainWindow.baml
+C:\Users\Petr Kubíček\code\Test rozhodčího\Test rozhodčího\obj\Release\Test rozhodčího.g.resources
+C:\Users\Petr Kubíček\code\Test rozhodčího\Test rozhodčího\obj\Release\Test_rozhodčího.Properties.Resources.resources
+C:\Users\Petr Kubíček\code\Test rozhodčího\Test rozhodčího\obj\Release\Test rozhodčího.csproj.GenerateResource.cache
+C:\Users\Petr Kubíček\code\Test rozhodčího\Test rozhodčího\obj\Release\Test rozhodčího.csproj.CoreCompileInputs.cache
+C:\Users\Petr Kubíček\code\Test rozhodčího\Test rozhodčího\obj\Release\Test rozhodčího.csproj.CopyComplete
+C:\Users\Petr Kubíček\code\Test rozhodčího\Test rozhodčího\obj\Release\Test rozhodčího.exe
+C:\Users\Petr Kubíček\code\Test rozhodčího\Test rozhodčího\obj\Release\Test rozhodčího.pdb
+C:\Users\Petr Kubíček\code\Test rozhodčího\Test rozhodčího\obj\Release\Test rozhodčího.csprojAssemblyReference.cache

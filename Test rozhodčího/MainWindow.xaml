@@ -1,0 +1,556 @@
+﻿<Window x:Class="Test_rozhodčího.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Test_rozhodčího"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Background="#ffffff"
+        Title="Test rozhodčího" Height="768" Width="768">
+
+    <ScrollViewer x:Name="Scroll" VerticalScrollBarVisibility="Auto">
+        <StackPanel Background="#fafafa">
+            <TextBlock TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Padding="20" >  
+            <InlineUIContainer>  
+             <TextBlock Foreground="#FFC107" FontSize="28" FontWeight="Bold"><Run Text="Test rozhodčího"/></TextBlock>  
+            </InlineUIContainer><LineBreak/>
+            <Run FontSize="12" Text="Test z pravidel florbalu a legislativy pro testování rozhodčích nováčků." />  
+            <Run FontSize="12" Text="Každý test je sestaven a uspořádán z 20 náhodných otázek." />  
+            <Run FontSize="12" Text="V testu budou na každou otázku čtyři možné odpovědi, ale vždy jen jedna z nich bude správná." />
+            <Run FontSize="12" Text="Po dokončení bude test vyhodnocen." />  
+            <LineBreak/>
+            <LineBreak/>
+                
+            <StackPanel x:Name="Playground" Background="#fafafa">
+
+                <TextBlock Margin="0 10 0 10" TextWrapping="Wrap" FontSize="16"><Run Text="{Binding Selection[0].Task, Mode = OneWay}"/></TextBlock>  
+                <StackPanel x:Name="sp0">
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[0].Answers[0], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>                  
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[0].Answers[1], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>              
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[0].Answers[2], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>  
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[0].Answers[3], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>  
+                </StackPanel>
+                
+                <Separator Margin="0 15 0 0" Background="#3E2723" Opacity="0.2"/>
+            
+                <TextBlock Margin="0 10 0 10" TextWrapping="Wrap" FontSize="16"><Run Text="{Binding Selection[1].Task, Mode = OneWay}"/></TextBlock>  
+                <StackPanel x:Name="sp1">
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[1].Answers[0], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>                  
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[1].Answers[1], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>              
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[1].Answers[2], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>  
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[1].Answers[3], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>  
+                </StackPanel>
+                
+                <Separator Margin="0 15 0 0" Background="#3E2723" Opacity="0.2"/>
+            
+                <TextBlock Margin="0 10 0 10" TextWrapping="Wrap" FontSize="16"><Run Text="{Binding Selection[2].Task, Mode = OneWay}"/></TextBlock>  
+                <StackPanel x:Name="sp2">
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[2].Answers[0], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>                  
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[2].Answers[1], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>              
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[2].Answers[2], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>  
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[2].Answers[3], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>  
+                </StackPanel>
+                
+                <Separator Margin="0 15 0 0" Background="#3E2723" Opacity="0.2"/> 
+            
+                <TextBlock Margin="0 10 0 10" TextWrapping="Wrap" FontSize="16"><Run Text="{Binding Selection[3].Task, Mode = OneWay}"/></TextBlock>  
+                <StackPanel x:Name="sp3">
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[3].Answers[0], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>                  
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[3].Answers[1], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>              
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[3].Answers[2], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>  
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[3].Answers[3], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>  
+                </StackPanel>
+                
+                <Separator Margin="0 15 0 0" Background="#3E2723" Opacity="0.2"/>
+            
+                <TextBlock Margin="0 10 0 10"  TextWrapping="Wrap" FontSize="16"><Run Text="{Binding Selection[4].Task, Mode = OneWay}"/></TextBlock>  
+                <StackPanel x:Name="sp4">
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[4].Answers[0], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>                  
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[4].Answers[1], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>              
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[4].Answers[2], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>  
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[4].Answers[3], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>  
+                </StackPanel>
+                
+                <Separator Margin="0 15 0 0" Background="#3E2723" Opacity="0.2"/>
+            
+                <TextBlock Margin="0 10 0 10" TextWrapping="Wrap" FontSize="16"><Run Text="{Binding Selection[5].Task, Mode = OneWay}"/></TextBlock>  
+                <StackPanel x:Name="sp5">
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[5].Answers[0], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>                  
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[5].Answers[1], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>              
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[5].Answers[2], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>  
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[5].Answers[3], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>  
+                </StackPanel>
+            
+                <Separator Margin="0 15 0 0" Background="#3E2723" Opacity="0.2"/>
+            
+                <TextBlock Margin="0 10 0 10" TextWrapping="Wrap" FontSize="16"><Run Text="{Binding Selection[6].Task, Mode = OneWay}"/></TextBlock>  
+                <StackPanel x:Name="sp6">
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[6].Answers[0], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>                  
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[6].Answers[1], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>              
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[6].Answers[2], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>  
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[6].Answers[3], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>  
+                </StackPanel>
+            
+                <Separator Margin="0 15 0 0" Background="#3E2723" Opacity="0.2"/>
+            
+                <TextBlock Margin="0 10 0 10" TextWrapping="Wrap" FontSize="16"><Run Text="{Binding Selection[7].Task, Mode = OneWay}"/></TextBlock>  
+                <StackPanel x:Name="sp7">
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[7].Answers[0], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>                  
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[7].Answers[1], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>              
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[7].Answers[2], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>  
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[7].Answers[3], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>  
+                </StackPanel>
+            
+                <Separator Margin="0 15 0 0" Background="#3E2723" Opacity="0.2"/>
+            
+                <TextBlock Margin="0 10 0 10" TextWrapping="Wrap" FontSize="16"><Run Text="{Binding Selection[8].Task, Mode = OneWay}"/></TextBlock>  
+                <StackPanel x:Name="sp8">
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[8].Answers[0], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>                  
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[8].Answers[1], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>              
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[8].Answers[2], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>  
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[8].Answers[3], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>  
+                </StackPanel>
+            
+                <Separator Margin="0 15 0 0" Background="#3E2723" Opacity="0.2"/>
+            
+                <TextBlock Margin="0 10 0 10" TextWrapping="Wrap" FontSize="16"><Run Text="{Binding Selection[9].Task, Mode = OneWay}"/></TextBlock>  
+                <StackPanel x:Name="sp9">
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[9].Answers[0], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>                  
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[9].Answers[1], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>              
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[9].Answers[2], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>  
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[9].Answers[3], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>  
+                </StackPanel>
+            
+                <Separator Margin="0 15 0 0" Background="#3E2723" Opacity="0.2"/>
+           
+                <TextBlock Margin="0 10 0 10" TextWrapping="Wrap" FontSize="16"><Run Text="{Binding Selection[10].Task, Mode = OneWay}"/></TextBlock>  
+                <StackPanel x:Name="sp10">
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[10].Answers[0], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>                  
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[10].Answers[1], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>              
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[10].Answers[2], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>  
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[10].Answers[3], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>  
+                </StackPanel>
+            
+                <Separator Margin="0 15 0 0" Background="#3E2723" Opacity="0.2"/>
+            
+                <TextBlock Margin="0 10 0 10" TextWrapping="Wrap" FontSize="16"><Run Text="{Binding Selection[11].Task, Mode = OneWay}"/></TextBlock>  
+                <StackPanel x:Name="sp11">
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[11].Answers[0], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>                  
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[11].Answers[1], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>              
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[11].Answers[2], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>  
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[11].Answers[3], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>  
+                </StackPanel>
+            
+                <Separator Margin="0 15 0 0" Background="#3E2723" Opacity="0.2"/>
+            
+                <TextBlock Margin="0 10 0 10" TextWrapping="Wrap" FontSize="16"><Run Text="{Binding Selection[12].Task, Mode = OneWay}"/></TextBlock>  
+                <StackPanel x:Name="sp12">
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[12].Answers[0], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>                  
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[12].Answers[1], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>              
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[12].Answers[2], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>  
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[12].Answers[3], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>  
+                </StackPanel>
+            
+                <Separator Margin="0 15 0 0" Background="#3E2723" Opacity="0.2"/>
+                
+                <TextBlock Margin="0 10 0 10" TextWrapping="Wrap" FontSize="16"><Run Text="{Binding Selection[13].Task, Mode = OneWay}"/></TextBlock>  
+                <StackPanel x:Name="sp13">
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[13].Answers[0], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>                  
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[13].Answers[1], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>              
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[13].Answers[2], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>  
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[13].Answers[3], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>  
+                </StackPanel>
+            
+                <Separator Margin="0 15 0 0" Background="#3E2723" Opacity="0.2"/>
+           
+                <TextBlock Margin="0 10 0 10" TextWrapping="Wrap" FontSize="16"><Run Text="{Binding Selection[14].Task, Mode = OneWay}"/></TextBlock>  
+                <StackPanel x:Name="sp14">
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[14].Answers[0], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>                  
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[14].Answers[1], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>              
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[14].Answers[2], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>  
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[14].Answers[3], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>  
+                </StackPanel>
+            
+                <Separator Margin="0 15 0 0" Background="#3E2723" Opacity="0.2"/>
+           
+                <TextBlock Margin="0 10 0 10" TextWrapping="Wrap" FontSize="16"><Run Text="{Binding Selection[15].Task, Mode = OneWay}"/></TextBlock>  
+                <StackPanel x:Name="sp15">
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[15].Answers[0], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>                  
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[15].Answers[1], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>              
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[15].Answers[2], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>  
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[15].Answers[3], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>  
+                </StackPanel>
+            
+                <Separator Margin="0 15 0 0" Background="#3E2723" Opacity="0.2"/>
+            
+                <TextBlock Margin="0 10 0 10" TextWrapping="Wrap" FontSize="16"><Run Text="{Binding Selection[16].Task, Mode = OneWay}"/></TextBlock>  
+                <StackPanel x:Name="sp16">
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[16].Answers[0], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>                  
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[16].Answers[1], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>              
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[16].Answers[2], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>  
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[16].Answers[3], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>  
+                </StackPanel>
+            
+                <Separator Margin="0 15 0 0" Background="#3E2723" Opacity="0.2"/>
+           
+                <TextBlock Margin="0 10 0 10" TextWrapping="Wrap" FontSize="16"><Run Text="{Binding Selection[17].Task, Mode = OneWay}"/></TextBlock>  
+                <StackPanel x:Name="sp17">
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[17].Answers[0], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>                  
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[17].Answers[1], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>              
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[17].Answers[2], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>  
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[17].Answers[3], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>  
+                </StackPanel>
+            
+                <Separator Margin="0 15 0 0" Background="#3E2723" Opacity="0.2"/>
+            
+                <TextBlock Margin="0 10 0 10" TextWrapping="Wrap" FontSize="16"><Run Text="{Binding Selection[18].Task, Mode = OneWay}"/></TextBlock>  
+                <StackPanel x:Name="sp18">
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[18].Answers[0], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>                  
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[18].Answers[1], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>              
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[18].Answers[2], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>  
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[18].Answers[3], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>  
+                </StackPanel>
+            
+                <Separator Margin="0 15 0 0" Background="#3E2723" Opacity="0.2"/>
+            
+                <TextBlock Margin="0 10 0 10" TextWrapping="Wrap" FontSize="16"><Run Text="{Binding Selection[19].Task, Mode = OneWay}"/></TextBlock>  
+                <StackPanel x:Name="sp19">
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[19].Answers[0], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>                  
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[19].Answers[1], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>              
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[19].Answers[2], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>  
+                    <RadioButton Click="radioClick" Padding="15 0 0 0" Foreground="#111" FontSize="14">
+                        <RadioButton.Content>
+                            <TextBlock Text="{Binding Selection[19].Answers[3], Mode = OneWay}" TextWrapping="Wrap"></TextBlock>
+                        </RadioButton.Content>
+                    </RadioButton>  
+                </StackPanel>
+            <Separator Margin="0 15 0 0" Background="#3E2723" Opacity="0.2"/>
+            </StackPanel>
+            
+            <LineBreak/>
+            <LineBreak/>
+            
+            <Button x:Name="ResultButton" Content="Vyhodnotit" Background="#2E7D32" Foreground="#fff" Click="ResultButton_Click"></Button>
+            <Button x:Name="NextButton" Content="Další pokus" Background="#FFC107" Foreground="#000" Click="NextButton_Click"></Button>
+        </TextBlock>
+        </StackPanel>
+    </ScrollViewer>
+</Window>
